@@ -75,33 +75,3 @@
 .toutiao-yanzhengma:before {
   content: "\e615";
 }
-body {
-  background-color: #f5f7f9;
-}
-.fasong {
-  border-left: 1px solid #eeeeee;
-}
-.fasong .van-button {
-  font-size: 12px;
-  width: 76px;
-  height: 23px;
-  margin-left: 22px;
-}
-.van-icon-arrow-left {
-  color: #fff !important;
-}
-.van-nav-bar {
-  background-color: #3296fa !important;
-}
-.van-nav-bar .van-ellipsis {
-  color: #fff;
-}
-.login-btn {
-  padding: 25px 15px;
-}
-.login-btn .van-button {
-  background-color: #6db4fb;
-  border: none;
-  font-size: 16px;
-  border-radius: 5px;
-}
