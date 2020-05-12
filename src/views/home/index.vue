@@ -1,10 +1,10 @@
 <template>
-  <div class="">首页页面</div>
+  <div class="shouye-container">首页页面</div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'shouyeIndex',
   components: {},
   props: {},
   data () {
