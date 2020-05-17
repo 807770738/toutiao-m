@@ -80,6 +80,7 @@ export default {
         // console.log(res)
         this.$toast.success('登录成功')
         this.$store.commit('setUser', res.data.data)
+        this.$router.back()
       } catch (err) {
         console.log(err)
         this.$toast.fail('登录失败')
