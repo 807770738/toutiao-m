@@ -37,6 +37,8 @@
 
 <script>
 import { GetAll } from '@/api/channel'
+import { mapState } from 'vuex'
+import { setItem } from '@/utils/store'
 export default {
   name: 'tancengIndex',
   components: {},
@@ -57,6 +59,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['user']),
     recomend () {
       return this.allChannels.filter(channel => {
         return !this.channels.find(userchannel => {
@@ -77,6 +80,11 @@ export default {
     },
     onadd (channel) {
       this.channels.push(channel)
+      if (this.user) {
+
+      } else {
+        setItem('user-channels', this.channels)
+      }
     },
     ondelete (index) {
       if (this.isshow && index !== 0) {
@@ -86,13 +94,11 @@ export default {
       }
     },
     deletechannel (index) {
-      console.log('删除频道')
       this.channels.splice(index, 1)
     },
     switchannel (index) {
       this.$emit('close')
       this.$emit('update-active', index)
-      console.log('切换频道')
     }
   }
 }

@@ -1,7 +1,12 @@
 <template>
   <div class="shouye-container">
    <van-nav-bar>
-      <van-button class="search-btn" type="info" slot="title" icon="search" round size="small">搜索</van-button>
+      <van-button class="search-btn"
+       type="info"
+        slot="title"
+         icon="search"
+          round size="small"
+          to="/search">搜索</van-button>
    </van-nav-bar>
    <!-- 文章频道 -->
    <van-tabs v-model="active" class="tabs">
@@ -32,7 +37,7 @@ export default {
     return {
       active: 0,
       channels: [],
-      isShow: true
+      isShow: false
     }
   },
   computed: {},
