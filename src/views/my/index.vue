@@ -7,7 +7,7 @@
           <van-image width="50" height="50" round fit="cover" :src="currentUser.photo" />
         </div>
         <div slot="title" class="title">{{currentUser.name}}</div>
-        <van-button size="mini" round class="btn">编辑资料</van-button>
+        <van-button size="mini" round class="btn" to="/userIfor">编辑资料</van-button>
       </van-cell>
       <!-- 导航栏 -->
          <van-grid :border="false" class="nav">

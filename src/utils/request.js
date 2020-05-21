@@ -3,7 +3,8 @@ import axios from 'axios'
 import store from '@/store/'
 import JSONbig from 'json-bigint'
 const request = axios.create({
-  baseURL: 'http://ttapi.research.itcast.cn/',
+  // baseURL: 'http://ttapi.research.itcast.cn/',
+  baseURL: 'http://api-toutiao-web.itheima.net',
   transformResponse: [function (data) {
     // Do whatever you want to transform the data
     // console.log(data)

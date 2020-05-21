@@ -2,7 +2,7 @@
 
 import request from '@/utils/request'
 
-import store from '@/store/'
+// import store from '@/store/'
 
 export const login = data => {
   return request({
@@ -23,13 +23,13 @@ export const Send = mobile => {
 
 // 获取用户登录信息
 
-export const GetUser = mobile => {
+export const GetUser = () => {
   return request({
     method: 'GET',
-    url: '/app/v1_0/user',
-    headers: {
-      Authorization: `Bearer ${store.state.user.token}`
-    }
+    url: '/app/v1_0/user'
+    // headers: {
+    //   Authorization: `Bearer ${store.state.user.token}`
+    // }
   })
 }
 
@@ -57,5 +57,22 @@ export const deleteFollow = userId => {
   return request({
     method: 'DELETE',
     url: `/app/v1_0/user/followings/${userId}`
+  })
+}
+
+// 获取用户个人资料
+export const getuserinfo = () => {
+  return request({
+    method: 'GET',
+    url: '/app/v1_0/user/profile'
+  })
+}
+
+// 修改用户个人资料
+export const updateuserinfo = data => {
+  return request({
+    method: 'PATCH',
+    url: '/app/v1_0/user/profile',
+    data
   })
 }
